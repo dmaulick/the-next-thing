@@ -6,12 +6,10 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-
     "temp": "echo 'the below are temp and are part of learning:'",
     "web:serve": "npx nx serve the-react-web-thing",
     "web:e2e": "npx nx e2e the-react-web-thing-e2e",
     "web:e2e:watch": "yarn web:e2e --watch"
-
   },
   "private": true,
   "dependencies": {
