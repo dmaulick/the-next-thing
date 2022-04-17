@@ -1,0 +1,28 @@
+{
+  "root": "apps/the-react-web-thing-e2e",
+  "sourceRoot": "apps/the-react-web-thing-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/the-react-web-thing-e2e/cypress.json",
+        "devServerTarget": "the-react-web-thing:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "the-react-web-thing:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/the-react-web-thing-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["the-react-web-thing"]
+}

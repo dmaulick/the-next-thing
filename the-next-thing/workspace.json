@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "the-react-web-thing": "apps/the-react-web-thing",
+    "the-react-web-thing-e2e": "apps/the-react-web-thing-e2e"
+  }
+}
