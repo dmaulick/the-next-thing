@@ -1,0 +1,66 @@
+{
+  "root": "apps/the-react-native-thing-e2e",
+  "sourceRoot": "apps/the-react-native-thing-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "build-ios": {
+      "executor": "@nrwl/detox:build",
+      "options": {
+        "detoxConfiguration": "ios.sim.debug"
+      },
+      "configurations": {
+        "production": {
+          "detoxConfiguration": "ios.sim.release"
+        }
+      }
+    },
+    "test-ios": {
+      "executor": "@nrwl/detox:test",
+      "options": {
+        "detoxConfiguration": "ios.sim.debug",
+        "buildTarget": "the-react-native-thing-e2e:build-ios"
+      },
+      "configurations": {
+        "production": {
+          "detoxConfiguration": "ios.sim.release",
+          "buildTarget": "the-react-native-thing-e2e:build-ios:prod"
+        }
+      }
+    },
+    "build-android": {
+      "executor": "@nrwl/detox:build",
+      "options": {
+        "detoxConfiguration": "android.emu.debug"
+      },
+      "configurations": {
+        "production": {
+          "detoxConfiguration": "android.emu.release"
+        }
+      }
+    },
+    "test-android": {
+      "executor": "@nrwl/detox:test",
+      "options": {
+        "detoxConfiguration": "android.emu.debug",
+        "buildTarget": "the-react-native-thing-e2e:build-android"
+      },
+      "configurations": {
+        "production": {
+          "detoxConfiguration": "android.emu.release",
+          "buildTarget": "the-react-native-thing-e2e:build-android:prod"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/the-react-native-thing-e2e/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["the-react-native-thing"]
+}

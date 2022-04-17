@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "the-react-native-thing": "apps/the-react-native-thing",
+    "the-react-native-thing-e2e": "apps/the-react-native-thing-e2e",
     "the-react-web-thing": "apps/the-react-web-thing",
     "the-react-web-thing-e2e": "apps/the-react-web-thing-e2e"
   }
